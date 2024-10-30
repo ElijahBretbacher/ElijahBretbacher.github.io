@@ -1,4 +1,5 @@
 ---
+# layout: default
 layout: post
 title:  "Welcome to Jekyll!"
 date:   2024-10-26 15:03:14 +0200

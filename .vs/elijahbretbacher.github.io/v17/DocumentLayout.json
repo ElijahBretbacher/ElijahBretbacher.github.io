@@ -1,0 +1,173 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\_creative\\elijahbretbacher.github.io\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\_creative\\elijahbretbacher.github.io\\_posts\\2024-10-26-carmodel.markdown||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:_posts\\2024-10-26-carmodel.markdown||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\_creative\\elijahbretbacher.github.io\\_posts\\2024-10-26-welcome-to-jekyll.markdown||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:_posts\\2024-10-26-welcome-to-jekyll.markdown||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\_creative\\elijahbretbacher.github.io\\_posts\\2924-10-26-anothercar.markdown||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:_posts\\2924-10-26-anothercar.markdown||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\_creative\\elijahbretbacher.github.io\\index.markdown||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:index.markdown||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\_creative\\elijahbretbacher.github.io\\Gemfile||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Gemfile||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\_creative\\elijahbretbacher.github.io\\_config.yml||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:_config.yml||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\_creative\\elijahbretbacher.github.io\\_data\\searchscript.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:_data\\searchscript.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\_creative\\elijahbretbacher.github.io\\Gemfile.lock||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Gemfile.lock||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\_creative\\elijahbretbacher.github.io\\about.markdown||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:about.markdown||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "2924-10-26-anothercar.markdown",
+              "DocumentMoniker": "D:\\_creative\\elijahbretbacher.github.io\\_posts\\2924-10-26-anothercar.markdown",
+              "RelativeDocumentMoniker": "_posts\\2924-10-26-anothercar.markdown",
+              "ToolTip": "D:\\_creative\\elijahbretbacher.github.io\\_posts\\2924-10-26-anothercar.markdown",
+              "RelativeToolTip": "_posts\\2924-10-26-anothercar.markdown",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAA3AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2024-10-27T00:24:52.58Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "searchscript.js",
+              "DocumentMoniker": "D:\\_creative\\elijahbretbacher.github.io\\_data\\searchscript.js",
+              "RelativeDocumentMoniker": "_data\\searchscript.js",
+              "ToolTip": "D:\\_creative\\elijahbretbacher.github.io\\_data\\searchscript.js",
+              "RelativeToolTip": "_data\\searchscript.js",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2024-10-26T14:55:00.587Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "2024-10-26-carmodel.markdown",
+              "DocumentMoniker": "D:\\_creative\\elijahbretbacher.github.io\\_posts\\2024-10-26-carmodel.markdown",
+              "RelativeDocumentMoniker": "_posts\\2024-10-26-carmodel.markdown",
+              "ToolTip": "D:\\_creative\\elijahbretbacher.github.io\\_posts\\2024-10-26-carmodel.markdown",
+              "RelativeToolTip": "_posts\\2024-10-26-carmodel.markdown",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2024-10-26T14:40:24.055Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Gemfile",
+              "DocumentMoniker": "D:\\_creative\\elijahbretbacher.github.io\\Gemfile",
+              "RelativeDocumentMoniker": "Gemfile",
+              "ToolTip": "D:\\_creative\\elijahbretbacher.github.io\\Gemfile",
+              "RelativeToolTip": "Gemfile",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2024-10-26T14:26:55.302Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Gemfile.lock",
+              "DocumentMoniker": "D:\\_creative\\elijahbretbacher.github.io\\Gemfile.lock",
+              "RelativeDocumentMoniker": "Gemfile.lock",
+              "ToolTip": "D:\\_creative\\elijahbretbacher.github.io\\Gemfile.lock",
+              "RelativeToolTip": "Gemfile.lock",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2024-10-26T14:25:49.98Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "2024-10-26-welcome-to-jekyll.markdown",
+              "DocumentMoniker": "D:\\_creative\\elijahbretbacher.github.io\\_posts\\2024-10-26-welcome-to-jekyll.markdown",
+              "RelativeDocumentMoniker": "_posts\\2024-10-26-welcome-to-jekyll.markdown",
+              "ToolTip": "D:\\_creative\\elijahbretbacher.github.io\\_posts\\2024-10-26-welcome-to-jekyll.markdown",
+              "RelativeToolTip": "_posts\\2024-10-26-welcome-to-jekyll.markdown",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2024-10-26T14:25:12.572Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "about.markdown",
+              "DocumentMoniker": "D:\\_creative\\elijahbretbacher.github.io\\about.markdown",
+              "RelativeDocumentMoniker": "about.markdown",
+              "ToolTip": "D:\\_creative\\elijahbretbacher.github.io\\about.markdown",
+              "RelativeToolTip": "about.markdown",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2024-10-26T14:25:07.247Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "index.markdown",
+              "DocumentMoniker": "D:\\_creative\\elijahbretbacher.github.io\\index.markdown",
+              "RelativeDocumentMoniker": "index.markdown",
+              "ToolTip": "D:\\_creative\\elijahbretbacher.github.io\\index.markdown",
+              "RelativeToolTip": "index.markdown",
+              "ViewState": "AQIAABgAAAAAAAAAAAAAACgAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2024-10-26T14:25:00.689Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "_config.yml",
+              "DocumentMoniker": "D:\\_creative\\elijahbretbacher.github.io\\_config.yml",
+              "RelativeDocumentMoniker": "_config.yml",
+              "ToolTip": "D:\\_creative\\elijahbretbacher.github.io\\_config.yml",
+              "RelativeToolTip": "_config.yml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACAAAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003775|",
+              "WhenOpened": "2024-10-26T14:24:55.182Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

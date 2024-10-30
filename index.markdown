@@ -2,5 +2,56 @@
 # Feel free to add content and custom Front Matter to this file.
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 
-layout: home
+# layout: default
+layout: default
+title: "Asset Library"
 ---
+<form action="/search" method="get">
+  <input type="text" name="query" placeholder="Search for assets...">
+  <button type="submit">Search</button>
+</form>
+
+<div id="search-results"></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.8/lunr.min.js"></script>
+<script>
+  var postList = [];
+  var index = lunr(function() {
+  this.ref('id');
+    this.field('title');
+    this.field('tags');
+    this.field('description');
+    
+    {% for post in site.posts %}
+    this.add(
+        {
+          'id': {{ post.url | jsonify }},
+          'title': {{ post.title | jsonify }},
+          'tags': {{ post.tags | jsonify }},
+          'description': {{ post.description | jsonify }}
+        }
+    );
+    postList.push({
+      'url': '{{ post.url }}',
+      'title': '{{ post.title }}',
+      'tags': '{{ post.tags | jsonify }}',
+      'description': '{{ post.description | jsonify }}'
+    });
+    {% endfor %}
+  });
+
+  document.querySelector('form').addEventListener('submit', function(event) {
+    event.preventDefault();
+    var query = document.querySelector('input[name="query"]').value;
+    var results = index.search(query);
+
+    var resultsContainer = document.getElementById('search-results');
+    resultsContainer.innerHTML = '';
+
+    results.forEach(function(result) {
+      var post = postList.find(p => p.url === result.ref);
+      resultsContainer.innerHTML += `<div><a href="${result.ref}">${post.title}</a></div>`;
+    });
+  });
+</script>
+
