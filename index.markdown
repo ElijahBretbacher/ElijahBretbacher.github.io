@@ -17,7 +17,7 @@ title: "Asset Library"
 <button id="signin-button" onclick="handleAuthClick()">Sign In with Google</button>
 <button type="button" onclick="handleSignoutClick()">Sign Out</button>
 
-<script src="upload.js">
+<script src="apikey.js">
 
 <form action="/search" method="get">
   <input type="text" name="query" placeholder="Search for assets...">
