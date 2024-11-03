@@ -6,19 +6,6 @@
 layout: default
 title: "Asset Library"
 ---
-<form id="upload-form">
-  <label for="file">Choose a file:</label>
-  <input type="file" id="file" name="file">
-  <label for="tags">Enter tags (comma-separated):</label>
-  <input type="text" id="tags" name="tags">
-  <input type="submit" value="Upload">
-</form>
-<button id="signin-button" onclick="handleAuthClick()">Sign In with Google</button>
-<button type="button" onclick="handleSignoutClick()">Sign Out</button>
-
-<script src="upload.js"></script>
-
-
 <form action="/search" method="get">
   <input type="text" name="query" placeholder="Search for assets...">
   <button type="submit">Search</button>
@@ -68,22 +55,3 @@ title: "Asset Library"
   });
 </script>
 
-<script>
-document.getElementById('upload-form').addEventListener('submit', async (event) => {
-  event.preventDefault();
-  const formData = new FormData(event.target);
-  const file = formData.get('file');
-  const tags = formData.get('tags');
-
-  const response = await fetch('/.netlify/functions/upload', {
-    method: 'POST',
-    body: JSON.stringify({ file, tags }),
-  });
-
-  if (response.ok) {
-    alert('File uploaded successfully!');
-  } else {
-    alert('File upload failed.');
-  }
-});
-</script>
