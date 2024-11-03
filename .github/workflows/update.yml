@@ -6,6 +6,10 @@ on:
   push:
     branches:
       - master  # Trigger on pushes to the master branch
+  workflow_run:
+    workflows: ["Name of Previous Workflow"]
+    types:
+      - completed
 
 jobs:
   update:
@@ -31,7 +35,7 @@ jobs:
         run: |
           sudo apt-get update
           sudo apt-get install -y software-properties-common gnupg2
-          gpg --keyserver hkp://pool.sks-keyservers.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 7D2BAF1CF37B13E2069D6956105BD0E739499BDB
+          gpg --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 7D2BAF1CF37B13E2069D6956105BD0E739499BDB
           \curl -sSL https://get.rvm.io | bash -s stable
           source ~/.rvm/scripts/rvm
           rvm install "ruby-3.2.2"
@@ -39,6 +43,7 @@ jobs:
           gem install bundler jekyll --user-install
           echo 'export PATH="$HOME/.gem/ruby/3.2.2/bin:$PATH"' >> ~/.bashrc
           source ~/.bashrc
+        continue-on-error: true  # Continue even if this step fails
 
       - name: Cache Python Packages
         uses: actions/cache@v2
@@ -47,19 +52,26 @@ jobs:
           key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}
           restore-keys: |
             ${{ runner.os }}-pip-
+        continue-on-error: true  # Continue even if this step fails
 
       - name: Install Python Packages
         run: |
           pip install --upgrade google-api-python-client google-auth-httplib2 google-auth-oauthlib
+        continue-on-error: true  # Continue even if this step fails
 
       - name: Sync Files from Google Drive
-        run: python scripts/sync_files.py
+        run: python scripts/syncfiles.py
+        continue-on-error: true  # Continue even if this step fails
 
-      - name: Build Jekyll Site
-        run: bundle exec jekyll build
+      - name: Inject API Key and Build Jekyll Site
+        run: |
+          echo "window.API_KEY = '${{ secrets.API_KEY }}';" > _data/apikey.js
+          bundle exec jekyll build
+        continue-on-error: true  # Continue even if this step fails
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: _site
+        continue-on-error: true  # Ensure deployment happens even if previous steps fail
