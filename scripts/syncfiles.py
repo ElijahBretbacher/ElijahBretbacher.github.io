@@ -3,10 +3,11 @@ from google.oauth2 import service_account
 from googleapiclient.discovery import build
 
 # Set up Google Drive API
-SCOPES = ['https://www.googleapis.com/auth/drive.readonly']
-SERVICE_ACCOUNT_FILE = '_data/assetlibrary_token.json'
+SCOPES = ['https://www.googleapis.com/auth/drive.file']
+SERVICE_ACCOUNT_FILE = os.getenv('GOOGLE_APPLICATION_CREDENTIALS')
 creds = service_account.Credentials.from_service_account_file(
     SERVICE_ACCOUNT_FILE, scopes=SCOPES)
+print(creds)
 drive_service = build('drive', 'v3', credentials=creds)
 
 # Recursively list file names
