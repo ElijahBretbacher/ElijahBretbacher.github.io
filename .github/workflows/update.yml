@@ -5,7 +5,7 @@ on:
     - cron: '0 0 * * *'  # This runs the workflow daily at midnight UTC
   push:
     branches:
-      - master  # Trigger on pushes to the main branch
+      - master  # Trigger on pushes to the master branch
 
 jobs:
   update:
@@ -27,13 +27,15 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-gems-
 
-      - name: Install Ruby 3.2.2 and Gems
+      - name: Install RVM and Ruby 3.2.2
         run: |
           sudo apt-get update
-          sudo apt-get install -y software-properties-common
-          sudo apt-add-repository ppa:brightbox/ruby-ng
-          sudo apt-get update
-          sudo apt-get install -y ruby3.2 ruby3.2-dev
+          sudo apt-get install -y software-properties-common gnupg2
+          gpg --keyserver hkp://pool.sks-keyservers.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 7D2BAF1CF37B13E2069D6956105BD0E739499BDB
+          \curl -sSL https://get.rvm.io | bash -s stable
+          source ~/.rvm/scripts/rvm
+          rvm install "ruby-3.2.2"
+          rvm use "ruby-3.2.2" --default
           gem install bundler jekyll --user-install
           echo 'export PATH="$HOME/.gem/ruby/3.2.2/bin:$PATH"' >> ~/.bashrc
           source ~/.bashrc
