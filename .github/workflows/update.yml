@@ -2,10 +2,10 @@ name: Update Jekyll Site from Google Drive
 
 on:
   schedule:
-    - cron: '0 0 * * *'  # This runs the workflow daily
+    - cron: '0 0 * * *'  # This runs the workflow daily at midnight UTC
   push:
     branches:
-      - master  # Trigger on pushes to the main branch
+      - main  # Trigger on pushes to the main branch
 
 jobs:
   update:
@@ -19,15 +19,39 @@ jobs:
           echo "${{ secrets.GOOGLE_CREDENTIALS }}" > $HOME/service-account.json
           export GOOGLE_APPLICATION_CREDENTIALS=$HOME/service-account.json
 
-      - name: Install Dependencies
+      - name: Cache Ruby Gems
+        uses: actions/cache@v2
+        with:
+          path: ~/.gem/ruby/3.2.2
+          key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-gems-
+
+      - name: Install Ruby 3.2.2 and Gems
         run: |
           sudo apt-get update
-          sudo apt-get install -y ruby-full
-          gem install bundler jekyll
+          sudo apt-get install -y software-properties-common
+          sudo apt-add-repository ppa:brightbox/ruby-ng
+          sudo apt-get update
+          sudo apt-get install -y ruby3.2 ruby3.2-dev
+          gem install bundler jekyll --user-install
+          echo 'export PATH="$HOME/.gem/ruby/3.2.2/bin:$PATH"' >> ~/.bashrc
+          source ~/.bashrc
+
+      - name: Cache Python Packages
+        uses: actions/cache@v2
+        with:
+          path: ~/.cache/pip
+          key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}
+          restore-keys: |
+            ${{ runner.os }}-pip-
+
+      - name: Install Python Packages
+        run: |
           pip install --upgrade google-api-python-client google-auth-httplib2 google-auth-oauthlib
 
       - name: Sync Files from Google Drive
-        run: python scripts/syncfiles.py
+        run: python scripts/sync_files.py
 
       - name: Build Jekyll Site
         run: bundle exec jekyll build
@@ -35,5 +59,5 @@ jobs:
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
-          github_token: ${{ secrets.ACCESSTOKEN }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: _site
